@@ -52,6 +52,8 @@ h3, h4 {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   text-align: center;
+  text-decoration: none;
+  color: blueviolet;
 
   display: block;
   width: 100%;
@@ -59,6 +61,15 @@ h3, h4 {
   margin: 10px 0;
 
   border: 2px solid black;
+}
+
+.choices a:hover {
+  background-color: skyblue;
+  color: black;
+}
+
+.choices .selected {
+  background-color: skyblue;
 }
 
 /* End Choices */
