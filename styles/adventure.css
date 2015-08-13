@@ -31,6 +31,10 @@ h3, h4 {
   border-bottom: 1px solid lightgray;
 }
 
+.card p {
+  line-height: 1.5em;
+}
+
 /* Choices */
 
 .choices a {
