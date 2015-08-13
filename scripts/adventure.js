@@ -30,6 +30,16 @@ Handlebars.registerHelper('list', function (context, options) {
   return ret + '</ul>';
 });
 
+$(document).ready(function () {
+  $('[id*="-btn"]').on('click', function () {
+    var next = $(this).attr('href').slice(1);
+    console.log(next);
+    var html = template(data[next]);
+    console.log(html);
+    $('.wrapper').append(html);
+  });
+});
+
 /* Start Smooth Scroll
 Source for Code Snippet:
 https://css-tricks.com/snippets/jquery/smooth-scrolling/
