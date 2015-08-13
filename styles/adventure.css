@@ -11,11 +11,6 @@ h3, h4 {
   font-family: 'Rokkitt', serif;
 }
 
-h3 {
-  font-size: 2.5em;
-  text-align: center;
-}
-
 /* End Headings */
 
 /* Cards */
@@ -25,6 +20,15 @@ h3 {
   margin: 20px auto;
   box-shadow: 0 0 1em black;
   border: 1px solid lightgray;
+}
+
+.card .title {
+  margin: 0;
+  font-size: 2.5em;
+  text-align: center;
+
+  padding-bottom: 5px;
+  border-bottom: 1px solid lightgray;
 }
 
 /* Choices */
