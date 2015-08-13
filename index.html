@@ -48,6 +48,23 @@
     </div>
   </div>
 
+  <!-- Card Template -->
+  <script id="card-template" type="text/x-handlebars-template">
+    <div class="card" id="{{id}}">
+      <h3 class="title">{{title}}</h3>
+      {{{body}}}
+
+      <div class="choices">
+        <h4>Choices:</h4>
+        {{#list choice}}
+          <a href="#{{next}}" id="{{next}}-btn">
+            {{text}}
+          </a>
+        {{/list}}
+      </div>
+    </div>
+  </script>
+
   <!-- JavaScript for Adventure App -->
   <script src="scripts/adventure.js"></script>
 </body>
