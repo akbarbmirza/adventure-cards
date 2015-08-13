@@ -68,9 +68,16 @@ h3, h4 {
   margin-bottom: 0;
 }
 
-.choices a:hover {
+.choices a:hover, .choices .selected {
   background-color: skyblue;
   color: black;
+}
+
+.disabled a {
+  color: lightgray;
+  border: 2px solid gray;
+
+  pointer-events: none;
 }
 
 .choices .selected {
