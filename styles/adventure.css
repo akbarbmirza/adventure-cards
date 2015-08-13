@@ -36,6 +36,12 @@ h3, h4 {
 }
 
 /* Choices */
+.choices h4 {
+  font-size: 1.25em;
+  margin: 0;
+  border-bottom: 1px solid lightgray;
+  text-transform: uppercase;
+}
 
 .choices a {
   font-family: 'Montserrat', sans-serif;
