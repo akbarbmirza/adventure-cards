@@ -1,3 +1,28 @@
+/* Global Styles */
 body * {
   box-sizing: border-box;
+  font-family: 'Raleway', 'Helvetica Neue' , sans-serif;
 }
+
+/* End Global Styles */
+
+/* Headings */
+h3, h4 {
+  font-family: 'Rokkitt', serif;
+}
+
+h3 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+/* End Headings */
+
+/* Choices */
+
+.choices a {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+/* End Choices */
