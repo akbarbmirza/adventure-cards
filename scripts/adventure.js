@@ -1,21 +1,52 @@
 var source = $('#card-template').html();
 var template = Handlebars.compile(source);
 var data = {
-  'welcome': {
+  'start': {
+    id: 'start',
     title: 'Welcome',
-    body: '<p>You wake up in a room! You see a door and a window. Which do you use?</p>',
+    body: '<p>A strange man, dressed in a trenchcoat and with wild hair stops you on your way home. He asks, "If you could bring an amial back to life, what would it be?"</p>',
     choice: [
-      { next: 'window', text: 'Go to the Window'},
-      { next: 'door', text: 'Open the door'}
+      { next: 'ignore', text: 'Ignore Him'},
+      { next: 'dino', text: 'A Dinosaur!'},
+      { next: 'bird', text: 'A Bird!'},
+      { next: 'mammal', text: 'A Mammal!'}
     ]
   },
-  'window': {
-    id: 'window',
-    title: 'The Window',
-    body: '<p>You see a beautiful world outside!</p>',
+  'ignore': {
+    id: 'ignore',
+    title: 'Ignore Him!',
+    body: '<p>You ignore the man, and go on with the rest of your day. "What a creep!"</p>',
     choice: [
-      { next: 'sleep', text: 'Go to sleep'},
-      { next: 'smile', text: 'Smile'}
+    ]
+  },
+  'dino': {
+    id: 'dino',
+    title: 'A Dinosaur!',
+    body: '<p>The man responds, "Interesting! What kind of dinosaur?"</p>',
+    choice: [
+      { next: 'trex', text: 'A T-Rex!'},
+      { next: 'raptor', text: 'A Velociraptor!'},
+      { next: 'bronto', text: 'A Brontosaurus!'}
+    ]
+  },
+  'bird': {
+    id: 'bird',
+    title: 'A Bird!',
+    body: '<p>The man responds, "Interesting! What kind of bird?"</p>',
+    choice: [
+      { next: 'para', text: 'A Carolina Parakeet!'},
+      { next: 'dodo', text: 'A Dodo!'},
+      { next: 'moa', text: 'A Giant Moa!'}
+    ]
+  },
+  'mammal': {
+    id: 'mammal',
+    title: 'A Mammal!',
+    body: '<p>The man responds, "Kinda boring, but okay. What kind of mammal?"</p>',
+    choice: [
+      { next: 'wooly', text: 'A Wooly Mammoth!'},
+      { next: 'taz', text: 'A Tasmanian Tiger!'},
+      { next: 'sabre', text: 'A Sabretoothed Tiger!'}
     ]
   }
 };
@@ -31,12 +62,17 @@ Handlebars.registerHelper('list', function (context, options) {
 });
 
 $(document).ready(function () {
+  var html = template(data['start']);
+  $('.wrapper').append(html);
+
   $('[id*="-btn"]').on('click', function () {
     var next = $(this).attr('href').slice(1);
     console.log(next);
-    var html = template(data[next]);
+    html = template(data[next]);
     console.log(html);
     $('.wrapper').append(html);
+    $(this).addClass('selected');
+    $(this).closest('.choices').addClass('disabled');
   });
 });
 
