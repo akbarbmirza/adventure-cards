@@ -4,7 +4,7 @@ var data = {
   'start': {
     id: 'start',
     title: 'Welcome',
-    body: '<p>A strange man, dressed in a trenchcoat and with wild hair stops you on your way home. He asks, "If you could bring an amial back to life, what would it be?"</p>',
+    body: '<p>A strange man, dressed in a trenchcoat and with wild hair stops you on your way home. He asks, "If you could bring an animal back to life, what would it be?"</p>',
     choice: [
       { next: 'ignore', text: 'Ignore Him'},
       { next: 'dino', text: 'A Dinosaur!'},
